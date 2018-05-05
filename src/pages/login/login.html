@@ -1,0 +1,35 @@
+<ion-content padding class="master">
+  <div class="logo d-flex justify-content-center">
+    <img src="../assets/imgs/logo-extend.png" alt="" class="logo">
+  </div>
+
+  <div class="form-login">
+    <ion-list class="items-middle" text-center>
+      <ion-item>
+        <ion-label color="ligh-grey" floating>
+          <ion-icon item-left name="mail"></ion-icon>Email</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="ligh-grey" floating>
+          <ion-icon item-left name="lock"></ion-icon>Senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+
+      </ion-item>
+    </ion-list>
+    <div class="login-button">
+      <button ion-button>ENTRAR</button>
+    </div>
+    <div class="text-information">
+      <small>Não possui conta ainda?</small>
+      <h6>
+        <a (click)='goToCadastro()'>Cadastrar-se</a>
+      </h6>
+    </div>
+
+  </div>
+
+
+</ion-content>

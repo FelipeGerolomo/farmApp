@@ -25677,3 +25677,83 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+.master {
+  background-color: #31cc81;
+}
+
+.item-md {
+  background-color: transparent;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.button-md {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #0E9557;
+}
+
+ion-app.md [padding] .scroll-content {
+  padding: 65px;
+}
+
+.item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+  color: #fff;
+}
+
+.text-information {
+  margin-top: 10px;
+}
+
+.text-information h6 {
+  float: right;
+  margin: 0px;
+  color: white;
+}
+
+.text-information small {
+  font-size: 100%;
+}
+
+.master {
+  background-color: #31cc81;
+}
+
+.item-md {
+  background-color: transparent;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.button-md {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #0E9557;
+}
+
+ion-app.md [padding] .scroll-content {
+  padding: 65px;
+}
+
+.item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+  color: #fff;
+}
+
+.text-information {
+  margin-top: 10px;
+}
+
+.text-information h6 {
+  float: right;
+  margin: 0px;
+  color: white;
+}
+
+.text-information small {
+  font-size: 100%;
+}
