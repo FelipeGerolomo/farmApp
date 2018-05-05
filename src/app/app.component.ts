@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
+import { NoticiasPage } from '../pages/noticias/noticias';
+import { SensoresPage } from '../pages/sensores/sensores';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +29,8 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'Login', component: LoginPage },
       { title: 'Cadastro', component: CadastroPage },
-
+      { title: 'Noticias', component: NoticiasPage },
+      { title: 'Sensores', component: SensoresPage }
     ];
 
     console.log(this.pages)

@@ -25737,7 +25737,7 @@ ion-app.md [padding] .scroll-content {
 }
 
 ion-app.md [padding] .scroll-content {
-  padding: 65px;
+  padding: 16px;
 }
 
 .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
@@ -25756,4 +25756,28 @@ ion-app.md [padding] .scroll-content {
 
 .text-information small {
   font-size: 100%;
+}
+
+page-noticias .atributo-nome {
+  font-size: 20px;
+}
+
+page-noticias .table {
+  margin-bottom: 0px;
+}
+
+page-noticias .card-content-md {
+  padding: 0px 11px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+page-noticias .card-content-md {
+  padding: 0px 0px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+page-noticias .table td, page-noticias .table th {
+  font-size: 14px;
 }
