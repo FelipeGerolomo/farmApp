@@ -103,6 +103,8 @@ var NoticiasPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SensoresPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chart_js__ = __webpack_require__(416);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_chart_js__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -112,6 +114,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 /**
@@ -126,15 +129,79 @@ var SensoresPage = /** @class */ (function () {
         this.navParams = navParams;
     }
     SensoresPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SensoresPage');
+        this.lineChart = new __WEBPACK_IMPORTED_MODULE_2_chart_js__["Chart"](this.lineCanvas.nativeElement, {
+            type: 'line',
+            data: {
+                labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho"],
+                datasets: [
+                    {
+                        label: "Previsto(R$)",
+                        fill: false,
+                        lineTension: 0.1,
+                        backgroundColor: "rgba(75,192,192,0.4)",
+                        borderColor: "rgba(75,192,192,1)",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "rgba(75,192,192,1)",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        data: [65, 59, 80, 81, 56, 55, 80],
+                        spanGaps: false,
+                    },
+                    {
+                        label: "Executado(R$)",
+                        fill: false,
+                        lineTension: 0.1,
+                        backgroundColor: "rgba(255, 0, 0,0.4)",
+                        borderColor: "rgba(255, 0, 0,1)",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "rgba(255, 0, 0,1)",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(255, 0, 0,1)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        data: [50, 75, 40, 30, 60, 70, 40],
+                        spanGaps: false,
+                    }
+                ]
+            }
+        });
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('barCanvas'),
+        __metadata("design:type", Object)
+    ], SensoresPage.prototype, "barCanvas", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('doughnutCanvas'),
+        __metadata("design:type", Object)
+    ], SensoresPage.prototype, "doughnutCanvas", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('lineCanvas'),
+        __metadata("design:type", Object)
+    ], SensoresPage.prototype, "lineCanvas", void 0);
     SensoresPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-sensores',template:/*ion-inline-start:"C:\Users\Felipe Gerolomo\Desktop\Projetos\farmApp\src\pages\sensores\sensores.html"*/'<ion-header>\n\n    <ion-navbar>\n\n      <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n      <ion-title>Strider</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  \n\n  <ion-content padding>\n\n  \n\n    <ion-card style="border: none;">\n\n      <ion-card-content>\n\n        <ion-row>\n\n          <ion-col col-2>\n\n            <img style="width: 100% !important; margin: 0px !important;" class="img-small" src="../../assets/imgs/monitore.png">\n\n          </ion-col>\n\n          <ion-col col-10>\n\n            <b style="font-size: 17px; color: #212529;">Monitoramento do seu plantio!</b>\n\n            <h3 style="margin-top: 6px;"> - Informações sobre o preparo de solo, plantio, proteção de cultivo, colheita e armazenamento.</h3>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-card-content>\n\n    </ion-card>\n\n  \n\n  \n\n    <ion-card>\n\n        <ion-card-content>\n\n            <ion-row>\n\n                <ion-col col-2>\n\n                    <ion-icon style="font-size: 3em;\n\n                    margin-left: 17px;\n\n                    margin-top: 10px;\n\n                    color: #2ec95c;" name="md-arrow-round-up"></ion-icon>\n\n                </ion-col>\n\n                <ion-col col-10>\n\n                    <b style="font-size: 20px; color: #212529;">+ 20% Irrigação.</b>\n\n                    <h3> - Houve um aumento de 20% na irrigação do solo.</h3>\n\n                </ion-col>\n\n            </ion-row>          \n\n            <small style="float: right;\n\n                      color: #222;\n\n                      margin-right: 10px;">(Strider - Irrigação)</small>\n\n            </ion-card-content>\n\n    </ion-card>  \n\n\n\n\n\n    <ion-card>\n\n        <ion-card-content>\n\n            <ion-row>\n\n                <ion-col col-2>\n\n                    <ion-icon style="font-size: 3em;\n\n                    margin-left: 17px;\n\n                    margin-top: 10px;\n\n                    color: #2ec95c;" name="md-arrow-round-up"></ion-icon>\n\n                </ion-col>\n\n                <ion-col col-10>\n\n                    <b style="font-size: 20px; color: #212529;">- 2.340,00 R$ em Plantio por hectare.</b>\n\n                    <h3> - Houve uma economia no plantio por hectare.</h3>\n\n                </ion-col>\n\n            </ion-row>          \n\n            <small style="float: right;\n\n                      color: #222;\n\n                      margin-right: 10px;">(Strider - Planejamento)</small>\n\n            </ion-card-content>\n\n    </ion-card>  \n\n  \n\n  </ion-content>'/*ion-inline-end:"C:\Users\Felipe Gerolomo\Desktop\Projetos\farmApp\src\pages\sensores\sensores.html"*/,
+            selector: 'page-sensores',template:/*ion-inline-start:"C:\Users\Felipe Gerolomo\Desktop\Projetos\farmApp\src\pages\sensores\sensores.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Strider</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <ion-card style="border: none;">\n\n    <ion-card-content>\n\n      <ion-row>\n\n        <ion-col col-2>\n\n          <img style="width: 100% !important; margin: 0px !important;" class="img-small" src="../../assets/imgs/monitore.png">\n\n        </ion-col>\n\n        <ion-col col-10>\n\n          <b style="font-size: 17px; color: #212529;">Monitoramento do seu plantio!</b>\n\n          <h3 style="margin-top: 6px;"> - Informações sobre o preparo de solo, plantio, proteção de cultivo, colheita e armazenamento.</h3>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <ion-row>\n\n        <ion-col col-2>\n\n          <ion-icon style="font-size: 3em;\n\n                    margin-left: 17px;\n\n                    margin-top: 10px;\n\n                    color: #2ec95c;" name="md-arrow-round-up"></ion-icon>\n\n        </ion-col>\n\n        <ion-col col-10>\n\n          <b style="font-size: 20px; color: #212529;">+ 20% Irrigação.</b>\n\n          <h3> - Houve um aumento de 20% na irrigação do solo.</h3>\n\n        </ion-col>\n\n      </ion-row>\n\n      <small style="float: right;\n\n                      color: #222;\n\n                      margin-right: 10px;">(Strider - Irrigação)</small>\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <ion-row>\n\n        <ion-col col-2>\n\n          <ion-icon style="font-size: 3em;\n\n                    margin-left: 17px;\n\n                    margin-top: 10px;\n\n                    color: #2ec95c;" name="md-arrow-round-up"></ion-icon>\n\n        </ion-col>\n\n        <ion-col col-10>\n\n          <b style="font-size: 20px; color: #212529;">- 2.340,00 R$ em Plantio por hectare.</b>\n\n          <h3> - Houve uma economia no plantio por hectare.</h3>\n\n        </ion-col>\n\n      </ion-row>\n\n      <small style="float: right;\n\n                      color: #222;\n\n                      margin-right: 10px;">(Strider - Planejamento)</small>\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n\n\n\n\n<br>\n\n\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Controle de Orçamento\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <canvas #lineCanvas></canvas>\n\n    </ion-card-content>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Felipe Gerolomo\Desktop\Projetos\farmApp\src\pages\sensores\sensores.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
     ], SensoresPage);
     return SensoresPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=sensores.js.map
@@ -167,15 +234,15 @@ var map = {
 		3
 	],
 	"../pages/login/login.module": [
-		276,
+		278,
 		2
 	],
 	"../pages/noticias/noticias.module": [
-		277,
+		276,
 		1
 	],
 	"../pages/sensores/sensores.module": [
-		278,
+		277,
 		0
 	]
 };
@@ -302,9 +369,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/cadastro/cadastro.module#CadastroPageModule', name: 'CadastroPage', segment: 'cadastro', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/noticias/noticias.module#NoticiasPageModule', name: 'NoticiasPage', segment: 'noticias', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sensores/sensores.module#SensoresPageModule', name: 'SensoresPage', segment: 'sensores', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/sensores/sensores.module#SensoresPageModule', name: 'SensoresPage', segment: 'sensores', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
                     ]
                 }),
             ],
@@ -466,6 +533,275 @@ var ListPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=list.js.map
+
+/***/ }),
+
+/***/ 444:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 293,
+	"./af.js": 293,
+	"./ar": 294,
+	"./ar-dz": 295,
+	"./ar-dz.js": 295,
+	"./ar-kw": 296,
+	"./ar-kw.js": 296,
+	"./ar-ly": 297,
+	"./ar-ly.js": 297,
+	"./ar-ma": 298,
+	"./ar-ma.js": 298,
+	"./ar-sa": 299,
+	"./ar-sa.js": 299,
+	"./ar-tn": 300,
+	"./ar-tn.js": 300,
+	"./ar.js": 294,
+	"./az": 301,
+	"./az.js": 301,
+	"./be": 302,
+	"./be.js": 302,
+	"./bg": 303,
+	"./bg.js": 303,
+	"./bm": 304,
+	"./bm.js": 304,
+	"./bn": 305,
+	"./bn.js": 305,
+	"./bo": 306,
+	"./bo.js": 306,
+	"./br": 307,
+	"./br.js": 307,
+	"./bs": 308,
+	"./bs.js": 308,
+	"./ca": 309,
+	"./ca.js": 309,
+	"./cs": 310,
+	"./cs.js": 310,
+	"./cv": 311,
+	"./cv.js": 311,
+	"./cy": 312,
+	"./cy.js": 312,
+	"./da": 313,
+	"./da.js": 313,
+	"./de": 314,
+	"./de-at": 315,
+	"./de-at.js": 315,
+	"./de-ch": 316,
+	"./de-ch.js": 316,
+	"./de.js": 314,
+	"./dv": 317,
+	"./dv.js": 317,
+	"./el": 318,
+	"./el.js": 318,
+	"./en-au": 319,
+	"./en-au.js": 319,
+	"./en-ca": 320,
+	"./en-ca.js": 320,
+	"./en-gb": 321,
+	"./en-gb.js": 321,
+	"./en-ie": 322,
+	"./en-ie.js": 322,
+	"./en-il": 323,
+	"./en-il.js": 323,
+	"./en-nz": 324,
+	"./en-nz.js": 324,
+	"./eo": 325,
+	"./eo.js": 325,
+	"./es": 326,
+	"./es-do": 327,
+	"./es-do.js": 327,
+	"./es-us": 328,
+	"./es-us.js": 328,
+	"./es.js": 326,
+	"./et": 329,
+	"./et.js": 329,
+	"./eu": 330,
+	"./eu.js": 330,
+	"./fa": 331,
+	"./fa.js": 331,
+	"./fi": 332,
+	"./fi.js": 332,
+	"./fo": 333,
+	"./fo.js": 333,
+	"./fr": 334,
+	"./fr-ca": 335,
+	"./fr-ca.js": 335,
+	"./fr-ch": 336,
+	"./fr-ch.js": 336,
+	"./fr.js": 334,
+	"./fy": 337,
+	"./fy.js": 337,
+	"./gd": 338,
+	"./gd.js": 338,
+	"./gl": 339,
+	"./gl.js": 339,
+	"./gom-latn": 340,
+	"./gom-latn.js": 340,
+	"./gu": 341,
+	"./gu.js": 341,
+	"./he": 342,
+	"./he.js": 342,
+	"./hi": 343,
+	"./hi.js": 343,
+	"./hr": 344,
+	"./hr.js": 344,
+	"./hu": 345,
+	"./hu.js": 345,
+	"./hy-am": 346,
+	"./hy-am.js": 346,
+	"./id": 347,
+	"./id.js": 347,
+	"./is": 348,
+	"./is.js": 348,
+	"./it": 349,
+	"./it.js": 349,
+	"./ja": 350,
+	"./ja.js": 350,
+	"./jv": 351,
+	"./jv.js": 351,
+	"./ka": 352,
+	"./ka.js": 352,
+	"./kk": 353,
+	"./kk.js": 353,
+	"./km": 354,
+	"./km.js": 354,
+	"./kn": 355,
+	"./kn.js": 355,
+	"./ko": 356,
+	"./ko.js": 356,
+	"./ky": 357,
+	"./ky.js": 357,
+	"./lb": 358,
+	"./lb.js": 358,
+	"./lo": 359,
+	"./lo.js": 359,
+	"./lt": 360,
+	"./lt.js": 360,
+	"./lv": 361,
+	"./lv.js": 361,
+	"./me": 362,
+	"./me.js": 362,
+	"./mi": 363,
+	"./mi.js": 363,
+	"./mk": 364,
+	"./mk.js": 364,
+	"./ml": 365,
+	"./ml.js": 365,
+	"./mn": 366,
+	"./mn.js": 366,
+	"./mr": 367,
+	"./mr.js": 367,
+	"./ms": 368,
+	"./ms-my": 369,
+	"./ms-my.js": 369,
+	"./ms.js": 368,
+	"./mt": 370,
+	"./mt.js": 370,
+	"./my": 371,
+	"./my.js": 371,
+	"./nb": 372,
+	"./nb.js": 372,
+	"./ne": 373,
+	"./ne.js": 373,
+	"./nl": 374,
+	"./nl-be": 375,
+	"./nl-be.js": 375,
+	"./nl.js": 374,
+	"./nn": 376,
+	"./nn.js": 376,
+	"./pa-in": 377,
+	"./pa-in.js": 377,
+	"./pl": 378,
+	"./pl.js": 378,
+	"./pt": 379,
+	"./pt-br": 380,
+	"./pt-br.js": 380,
+	"./pt.js": 379,
+	"./ro": 381,
+	"./ro.js": 381,
+	"./ru": 382,
+	"./ru.js": 382,
+	"./sd": 383,
+	"./sd.js": 383,
+	"./se": 384,
+	"./se.js": 384,
+	"./si": 385,
+	"./si.js": 385,
+	"./sk": 386,
+	"./sk.js": 386,
+	"./sl": 387,
+	"./sl.js": 387,
+	"./sq": 388,
+	"./sq.js": 388,
+	"./sr": 389,
+	"./sr-cyrl": 390,
+	"./sr-cyrl.js": 390,
+	"./sr.js": 389,
+	"./ss": 391,
+	"./ss.js": 391,
+	"./sv": 392,
+	"./sv.js": 392,
+	"./sw": 393,
+	"./sw.js": 393,
+	"./ta": 394,
+	"./ta.js": 394,
+	"./te": 395,
+	"./te.js": 395,
+	"./tet": 396,
+	"./tet.js": 396,
+	"./tg": 397,
+	"./tg.js": 397,
+	"./th": 398,
+	"./th.js": 398,
+	"./tl-ph": 399,
+	"./tl-ph.js": 399,
+	"./tlh": 400,
+	"./tlh.js": 400,
+	"./tr": 401,
+	"./tr.js": 401,
+	"./tzl": 402,
+	"./tzl.js": 402,
+	"./tzm": 403,
+	"./tzm-latn": 404,
+	"./tzm-latn.js": 404,
+	"./tzm.js": 403,
+	"./ug-cn": 405,
+	"./ug-cn.js": 405,
+	"./uk": 406,
+	"./uk.js": 406,
+	"./ur": 407,
+	"./ur.js": 407,
+	"./uz": 408,
+	"./uz-latn": 409,
+	"./uz-latn.js": 409,
+	"./uz.js": 408,
+	"./vi": 410,
+	"./vi.js": 410,
+	"./x-pseudo": 411,
+	"./x-pseudo.js": 411,
+	"./yo": 412,
+	"./yo.js": 412,
+	"./zh-cn": 413,
+	"./zh-cn.js": 413,
+	"./zh-hk": 414,
+	"./zh-hk.js": 414,
+	"./zh-tw": 415,
+	"./zh-tw.js": 415
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 444;
 
 /***/ }),
 
