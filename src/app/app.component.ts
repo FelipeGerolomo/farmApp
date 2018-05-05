@@ -9,6 +9,7 @@ import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 import { NoticiasPage } from '../pages/noticias/noticias';
 import { SensoresPage } from '../pages/sensores/sensores';
+import { AppsPage } from '../pages/apps/apps';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,6 +29,7 @@ export class MyApp {
       { title: 'Início', component: HomePage },
       { title: 'Noticias', component: NoticiasPage },
       { title: 'Sensores', component: SensoresPage },
+      { title: 'Integrações', component: AppsPage },
       { title: 'Sair', component: LoginPage }
     ];
 
