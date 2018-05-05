@@ -1,68 +1,80 @@
 <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Strider</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content padding>
-  
-    <ion-card style="border: none;">
-      <ion-card-content>
-        <ion-row>
-          <ion-col col-2>
-            <img style="width: 100% !important; margin: 0px !important;" class="img-small" src="../../assets/imgs/monitore.png">
-          </ion-col>
-          <ion-col col-10>
-            <b style="font-size: 17px; color: #212529;">Monitoramento do seu plantio!</b>
-            <h3 style="margin-top: 6px;"> - Informações sobre o preparo de solo, plantio, proteção de cultivo, colheita e armazenamento.</h3>
-          </ion-col>
-        </ion-row>
-      </ion-card-content>
-    </ion-card>
-  
-  
-    <ion-card>
-        <ion-card-content>
-            <ion-row>
-                <ion-col col-2>
-                    <ion-icon style="font-size: 3em;
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Strider</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card style="border: none;">
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-2>
+          <img style="width: 100% !important; margin: 0px !important;" class="img-small" src="../../assets/imgs/monitore.png">
+        </ion-col>
+        <ion-col col-10>
+          <b style="font-size: 17px; color: #212529;">Monitoramento do seu plantio!</b>
+          <h3 style="margin-top: 6px;"> - Informações sobre o preparo de solo, plantio, proteção de cultivo, colheita e armazenamento.</h3>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-2>
+          <ion-icon style="font-size: 3em;
                     margin-left: 17px;
                     margin-top: 10px;
                     color: #2ec95c;" name="md-arrow-round-up"></ion-icon>
-                </ion-col>
-                <ion-col col-10>
-                    <b style="font-size: 20px; color: #212529;">+ 20% Irrigação.</b>
-                    <h3> - Houve um aumento de 20% na irrigação do solo.</h3>
-                </ion-col>
-            </ion-row>          
-            <small style="float: right;
+        </ion-col>
+        <ion-col col-10>
+          <b style="font-size: 20px; color: #212529;">+ 20% Irrigação.</b>
+          <h3> - Houve um aumento de 20% na irrigação do solo.</h3>
+        </ion-col>
+      </ion-row>
+      <small style="float: right;
                       color: #222;
                       margin-right: 10px;">(Strider - Irrigação)</small>
-            </ion-card-content>
-    </ion-card>  
+    </ion-card-content>
+  </ion-card>
 
 
-    <ion-card>
-        <ion-card-content>
-            <ion-row>
-                <ion-col col-2>
-                    <ion-icon style="font-size: 3em;
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-2>
+          <ion-icon style="font-size: 3em;
                     margin-left: 17px;
                     margin-top: 10px;
                     color: #2ec95c;" name="md-arrow-round-up"></ion-icon>
-                </ion-col>
-                <ion-col col-10>
-                    <b style="font-size: 20px; color: #212529;">- 2.340,00 R$ em Plantio por hectare.</b>
-                    <h3> - Houve uma economia no plantio por hectare.</h3>
-                </ion-col>
-            </ion-row>          
-            <small style="float: right;
+        </ion-col>
+        <ion-col col-10>
+          <b style="font-size: 20px; color: #212529;">- 2.340,00 R$ em Plantio por hectare.</b>
+          <h3> - Houve uma economia no plantio por hectare.</h3>
+        </ion-col>
+      </ion-row>
+      <small style="float: right;
                       color: #222;
                       margin-right: 10px;">(Strider - Planejamento)</small>
-            </ion-card-content>
-    </ion-card>  
-  
-  </ion-content>
+    </ion-card-content>
+  </ion-card>
+
+
+
+<br>
+
+  <ion-card>
+    <ion-card-header>
+      Controle de Orçamento
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #lineCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
