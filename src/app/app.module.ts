@@ -12,6 +12,7 @@ import { SensoresPage } from '../pages/sensores/sensores';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AppsPage } from '../pages/apps/apps';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     CadastroPage,
     NoticiasPage,
-    SensoresPage
+    SensoresPage,
+    AppsPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     CadastroPage,
     NoticiasPage,
-    SensoresPage
+    SensoresPage,
+    AppsPage
+
   ],
   providers: [
     StatusBar,

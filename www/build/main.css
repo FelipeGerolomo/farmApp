@@ -25678,6 +25678,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.list-md .item-block .item-inner {
+  border-bottom: 1px solid #31cc81;
+}
+
 .master {
   background-color: #31cc81;
 }
