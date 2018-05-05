@@ -21,8 +21,8 @@
         Cotações
       </ion-segment-button>
 
-      <ion-segment-button value="estiagem">
-        Estiagem
+      <ion-segment-button value="tecnologias">
+        Tecnologias
       </ion-segment-button>
     </ion-segment>
   </div>
@@ -40,40 +40,86 @@
           </p>
         </ion-card-content>
       </ion-card>
-
       <ion-card>
-        <img src="../assets/imgs/background_2.jpg" />
         <ion-card-content>
-          <ion-card-title>
-            Geada destroi lavoura
-          </ion-card-title>
-          <p>
-            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-          </p>
-        </ion-card-content>
-      </ion-card>
-
-      <ion-card>
-        <img src="../assets/imgs/background_2.jpg" />
-        <ion-card-content>
-          <ion-card-title>
-            Geada destroi lavoura
-          </ion-card-title>
-          <p>
-            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-          </p>
+          <div class="card-weather">
+            <span class="city">Maringá - PR</span>
+            <br>
+            <div class="sun"></div>
+            <span class="temp">33&#176;</span>
+            <span>
+              <ul class="variations">
+                <li>LIMPO</li>
+                <li>
+                  <span class="speed">9
+                    <span class="mph">mph</span>
+                  </span>
+                </li>
+              </ul>
+            </span>
+            <div class="forecast clear">
+              <div class="day tue">TER
+                <br>
+                <span class="cloudy"></span>
+                <br>
+                <span class="highTemp">23&#176;</span>
+                <br>
+                <span class="lowTemp">33&#176;</span>
+              </div>
+              <div class="day wed">QUA
+                <br>
+                <span class="sunny"></span>
+                <br>
+                <span class="highTemp">22&#176;</span>
+                <br>
+                <span class="lowTemp">30&#176;</span>
+              </div>
+              <div class="day thu">QUI
+                <br>
+                <span class="sunny"></span>
+                <br>
+                <span class="highTemp">18&#176;</span>
+                <br>
+                <span class="lowTemp">27&#176;</span>
+              </div>
+              <div class="day fri">SEX
+                <br>
+                <span class="cloudy"></span>
+                <br>
+                <span class="highTemp">19&#176;</span>
+                <br>
+                <span class="lowTemp">28&#176;</span>
+              </div>
+            </div>
+          </div>
         </ion-card-content>
       </ion-card>
 
     </ion-list>
 
     <ion-list *ngSwitchCase="'cotacoes'">
+      <ion-card>
+        <ion-card-content>
+         
+        </ion-card-content>
+      </ion-card>
+
 
 
     </ion-list>
 
-    <ion-list *ngSwitchCase="'estiagem'">
-
+    <ion-list *ngSwitchCase="'tecnologias'">
+      <ion-card>
+        <img src="../assets/imgs/john.jpg" />
+        <ion-card-content>
+          <ion-card-title>
+            Novos Modelos Autômonos John Deere
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
 
 
     </ion-list>
