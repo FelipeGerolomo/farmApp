@@ -20,13 +20,13 @@
       </ion-item>
     </ion-list>
     <div class="login-button">
-      <button ion-button>ENTRAR</button>
+      <button ion-button (click)="home()">ENTRAR</button>
     </div>
-    <div class="text-information">
-      <small>Não possui conta ainda?</small>
-      <h6>
-        <a (click)='goToCadastro()'>Cadastrar-se</a>
-      </h6>
+    <div styl="margin-top: 3em" class="text-information">
+      <small>Não possui conta ainda?
+          <a style="color: #fff" (click)='goToCadastro()'> Cadastrar-se</a>
+
+      </small>     
     </div>
 
   </div>
