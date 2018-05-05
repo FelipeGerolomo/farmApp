@@ -26,7 +26,7 @@ export class MyApp {
     this.pages = [
       { title: 'Início', component: HomePage },
       { title: 'Noticias', component: NoticiasPage },
-      { title: 'Sensores', component: SensoresPage },
+      { title: 'Monitoramento', component: SensoresPage },
       { title: 'Integrações', component: AppsPage },
       { title: 'Sair', component: LoginPage }
     ];

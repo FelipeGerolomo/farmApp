@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CadastroPage } from '../../pages/cadastro/cadastro';
-import { HomePage } from '../home/home';
+import { IntroPage } from '../intro/intro';
 
 /**
  * Generated class for the LoginPage page.
@@ -17,7 +17,7 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
   cadastroPage = CadastroPage;
-  rootPage = HomePage;
+  introPage = IntroPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -31,7 +31,7 @@ export class LoginPage {
   }
 
   home() {
-    this.navCtrl.setRoot(this.rootPage);
+    this.navCtrl.setRoot(this.introPage);
   }
 
 }

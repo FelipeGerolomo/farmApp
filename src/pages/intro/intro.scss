@@ -1,0 +1,16 @@
+.checkbox-md .checkbox-icon {
+    border-radius: 5px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #f8f9fa;
+    background-color: #31cc81;
+    -webkit-transition-duration: 280ms;
+    transition-duration: 280ms;
+    -webkit-transition-property: background;
+    transition-property: background;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
